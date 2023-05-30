@@ -70,3 +70,8 @@ window.onload = function(){
   })
 }
 
+document.getElementById('btnSubmit').addEventListener('click', function(){
+  swal("Thanks for getting in touch", "Email Sent", "success");
+  swal.fire('I');
+})
+
