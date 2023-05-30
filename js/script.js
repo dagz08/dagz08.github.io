@@ -63,15 +63,7 @@ var swiper = new Swiper(".testimonials-slider", {
   grabCursor:true,
 });
 
-window.onload = function(){
-  document.getElementById("downloadCV")
-  .addEventListener("click", ()=>{
-    
-  })
-}
-
 document.getElementById('btnSubmit').addEventListener('click', function(){
   swal("Thanks for getting in touch", "Email Sent", "success");
-  swal.fire('I');
 })
 
