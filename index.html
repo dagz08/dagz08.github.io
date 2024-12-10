@@ -1,281 +1,346 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-	<!-- custom css file link  -->
-	<link rel="stylesheet" href="./css/style.css" />
+    <!-- swiper css link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-	<!-- swiper css link  -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-	<!-- font awesome cdn link  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Karl Mendoza</title>
+  </head>
 
+  <body>
+    <!-- header start  -->
 
-	<title>Karl Mendoza</title>
-</head>
+    <header class="header">
+      <div class="container">
+        <a href="#home" class="logo">KM</a>
 
-<body>
-	<!-- header start  -->
+        <div id="menu-bar" class="fas fa-bars"></div>
 
-	<header class="header">
-		<div class="container">
-			<a href="#home" class="logo">KM</a>
+        <div class="navbar">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <!-- <a href="#portfolio">Portfolio</a> -->
+          <!-- <a href="#testimonials">Testimonials</a> -->
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
 
-			<div id="menu-bar" class="fas fa-bars"></div>
+    <!-- header end  -->
 
-			<div class="navbar">
-				<a href="#home">Home</a>
-				<a href="#about">About</a>
-				<a href="#services">Services</a>
-				<!-- <a href="#portfolio">Portfolio</a> -->
-				<!-- <a href="#testimonials">Testimonials</a> -->
-				<a href="#contact">Contact</a>
-			</div>
-		</div>
-	</header>
+    <!-- home start  -->
 
-	<!-- header end  -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Hello, my name is</h3>
+        <h1>Karl Mendoza</h1>
+        <p>and I'm a <span class="typing"></span> Developer</p>
+        <!-- <button class="btn" id="downloadCV">Download CV</button> -->
+        <a
+          href="cv/KarlMendozaCV_2024.pdf"
+          class="karlCv"
+          download="KarlMendozaCV_2024.pdf"
+          >Download CV</a
+        >
+      </div>
+    </section>
 
-	<!-- home start  -->
+    <!-- home end  -->
 
-	<section class="home" id="home">
-		<div class="content">
-			<h3>Hello, my name is</h3>
-			<h1>Karl Mendoza</h1>
-			<p>and I'm a <span class="typing"></span> Developer</p>
-			<!-- <button class="btn" id="downloadCV">Download CV</button> -->
-			<a href="cv/KarlMendozaCV_2023.pdf" class="karlCv" download="KarlMendozaCV_2023.pdf">Download CV</a>
-		</div>
-	</section>
+    <!-- about start  -->
 
-	<!-- home end  -->
+    <section class="about" id="about">
+      <div class="heading">
+        <h1>About me !</h1>
+      </div>
 
-	<!-- about start  -->
+      <div class="container">
+        <div class="image">
+          <img src="./images/Karl.jpg" alt="" />
+          <div class="overlay">
+            <div class="share">
+              <a
+                href="https://www.facebook.com/dagz.o8"
+                class="fab fa-facebook-f"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/john-karl-mendoza-67ab73216/"
+                class="fab fa-linkedin"
+              ></a>
+              <a
+                href="https://www.instagram.com/dagzzzzzzz/"
+                class="fab fa-instagram"
+              ></a>
+              <a href="#" class="fab fa-google"></a>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="flex">
+            <span class="details-btn active">details</span>
+            <span class="skills-btn">skills</span>
+            <span class="more-btn">more</span>
+          </div>
+          <div class="column">
+            <div class="details active">
+              <h3>About me.</h3>
+              <p>
+                Allow me to introduce you to a talented developer and puzzle
+                enthusiast. Meet Karl, a passionate individual who has found
+                their calling in the world of coding. At age 15, Karl possesses
+                an insatiable curiosity for all things related to technology and
+                problem-solving. With an unwavering love for puzzles, Karl
+                embraces the challenge of unraveling complex codes and finding
+                innovative solutions to intricate problems. His sharp analytical
+                skills and attention to detail enable him to dive deep into the
+                depths of coding languages, crafting elegant and efficient
+                solutions. Whether it's debugging intricate lines of code or
+                piecing together a mind-boggling puzzle, Karl tackles each
+                challenge with enthusiasm and determination. With his unique
+                blend of creativity and technical prowess, Karl is not only a
+                developer but a master puzzle solver, continuously pushing the
+                boundaries of what can be achieved in the digital realm.
+              </p>
+            </div>
+            <div class="skills">
+              <ul class="progress-list">
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>VB .NET</p>
+                    <span>95 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 95%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>C# .NET</p>
+                    <span>95 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 95%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>ASP.NET Webforms / ASP.NET CORE / ASP.NET MVC</p>
+                    <span>95 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 95%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>Javascript / JQuery / AngularJS / AJAX</p>
+                    <span>85 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 85%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>HTML / CSS / BOOTSTRAP</p>
+                    <span>90 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 90%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>MS SQL Database</p>
+                    <span>95 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 95%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>ENTITY FRAMEWORK / LAMBDA / LINQ</p>
+                    <span>95 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 95%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>GIT/SVN</p>
+                    <span>90 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 90%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>JIRA/TRACK</p>
+                    <span>90 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 90%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+                <li class="progress-item">
+                  <div class="label-wrapper">
+                    <p>Web API/Rest API</p>
+                    <span>90 %</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-fill"
+                      style="width: 90%; background-color: #1bbca8"
+                    ></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<section class="about" id="about">
-		<div class="heading">
-			<h1>About me !</h1>
-		</div>
+    <!-- about end  -->
 
-		<div class="container">
-			<div class="image">
-				<img src="./images/Karl.jpg" alt="" />
-				<div class="overlay">
-					<div class="share">
-						<a href="https://www.facebook.com/dagz.o8" class="fab fa-facebook-f"></a>
-						<a href="https://www.linkedin.com/in/john-karl-mendoza-67ab73216/" class="fab fa-linkedin"></a>
-						<a href="https://www.instagram.com/dagzzzzzzz/" class="fab fa-instagram"></a>
-						<a href="#" class="fab fa-google"></a>
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<div class="flex">
-					<span class="details-btn active">details</span>
-					<span class="skills-btn">skills</span>
-					<span class="more-btn">more</span>
-				</div>
-				<div class="column">
-					<div class="details active">
-						<h3>About me.</h3>
-						<p>
-							Allow me to introduce you to a talented developer and puzzle enthusiast. 
-							Meet Karl, a passionate individual who has found their calling in the world of coding. 
-							At age 15, Karl possesses an insatiable curiosity for all things related to technology and problem-solving. 
-							With an unwavering love for puzzles, Karl embraces the challenge of unraveling complex codes and finding innovative solutions to intricate problems. 
-							His sharp analytical skills and attention to detail enable him to dive deep into the depths of coding languages, crafting elegant and efficient solutions. 
-							Whether it's debugging intricate lines of code or piecing together a mind-boggling puzzle, Karl tackles each challenge with enthusiasm and determination. 
-							With his unique blend of creativity and technical prowess, Karl is not only a developer but a master puzzle solver, 
-							continuously pushing the boundaries of what can be achieved in the digital realm.
-						</p>
-					</div>
-					<div class="skills">
-						<ul class="progress-list">
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>VB .NET</p>
-									<span>95 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 95%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>C# .NET</p>
-									<span>95 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 95%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>ASP.NET Webforms / ASP.NET CORE / ASP.NET MVC</p>
-									<span>95 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 95%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>Javascript / JQuery / AngularJS / AJAX</p>
-									<span>85 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 85%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>HTML / CSS / BOOTSTRAP</p>
-									<span>90 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 90%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>MS SQL Database</p>
-									<span>95 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 95%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>ENTITY FRAMEWORK / LAMBDA / LINQ</p>
-									<span>95 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 95%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>GIT/SVN</p>
-									<span>90 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 90%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>JIRA/TRACK</p>
-									<span>90 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 90%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-							<li class="progress-item">
-								<div class="label-wrapper">
-									<p>Web API/Rest API</p>
-									<span>90 %</span>
-								</div>
-								<div class="progress">
-									<div class="progress-fill" style="width: 90%; background-color: #1bbca8"></div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- projects counter start  -->
 
-	<!-- about end  -->
+    <section class="projects-counter">
+      <div>
+        <h1 class="fontWhite">Profile</h1>
+      </div>
+      <div class="box-container">
+        <div class="box">
+          <i class="fa-brands fa-steam"></i>
+          <span>Gaming</span>
+          <h3>Dota 2</h3>
+          <h3>CS GO</h3>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-clock"></i>
+          <span>8 Years</span>
+          <h3>years of experience</h3>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>742</span>
+          <h3>projects done</h3>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-mug-hot"></i>
+          <span>1432</span>
+          <h3>coffee taken</h3>
+        </div>
+      </div>
+    </section>
 
-	<!-- projects counter start  -->
+    <!-- projects counter end  -->
 
-	<section class="projects-counter">
-		<div>
-			<h1 class="fontWhite">Profile</h1>
-		</div>
-		<div class="box-container">
-			<div class="box">
-				<i class="fa-brands fa-steam"></i>
-				<span>Gaming</span>
-				<h3>Dota 2</h3>
-				<h3>CS GO</h3>
-			</div>
-			<div class="box">
-				<i class="fa-solid fa-clock"></i>
-				<span>8 Years</span>
-				<h3>years of experience</h3>
-			</div>
-			<div class="box">
-				<i class="fa-solid fa-cart-shopping"></i>
-				<span>742</span>
-				<h3>projects done</h3>
-			</div>
-			<div class="box">
-				<i class="fa-solid fa-mug-hot"></i>
-				<span>1432</span>
-				<h3>coffee taken</h3>
-			</div>
-		</div>
-	</section>
+    <!-- services start  -->
 
-	<!-- projects counter end  -->
+    <section class="services" id="services">
+      <div class="heading">
+        <h1>What I Do?</h1>
+        <p>Full Stack Development</p>
+      </div>
 
-	<!-- services start  -->
+      <div class="box-container">
+        <div class="box">
+          <i class="fa-solid fa-paintbrush"></i>
+          <h3>Web Development</h3>
+          <p>
+            I create web applications for small to large scales businesses from
+            start to finish. This includes front-end and back-end development,
+            API development, database management and more.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-code"></i>
+          <h3>Desktop App Development</h3>
+          <p>
+            I create stand alone desktop applications such as RFID Attendance
+            System, Payroll System, Reporting tools and integrations with other
+            systems or services.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fa-brands fa-sistrix"></i>
+          <h3>Consulting</h3>
+          <p>
+            I design and architect software solutions. This includes designing
+            the system's structure, database schemas, user interfaces, and
+            integrations with other systems or services.
+          </p>
+        </div>
+      </div>
+    </section>
 
-	<section class="services" id="services">
-		<div class="heading">
-			<h1>What I Do?</h1>
-			<p>Full Stack Development</p>
-		</div>
+    <!-- services end  -->
 
-		<div class="box-container">
-			<div class="box">
-				<i class="fa-solid fa-paintbrush"></i>
-				<h3>Web Development</h3>
-				<p>I create web applications for small to large scales businesses from start to finish. 
-					This includes front-end and back-end development, API development, database management and more.</p>
-			</div>
-			<div class="box">
-				<i class="fa-solid fa-code"></i>
-				<h3>Desktop App Development</h3>
-				<p>I create stand alone desktop applications such as RFID Attendance System, Payroll System, 
-					Reporting tools and integrations with other systems or services. </p>
-			</div>
-			<div class="box">
-				<i class="fa-brands fa-sistrix"></i>
-				<h3>Consulting</h3>
-				<p>I design and architect software solutions. This includes designing the system's structure, 
-					database schemas, user interfaces, and integrations with other systems or services.</p>
-			</div>
-		</div>
-	</section>
+    <!-- available start  -->
 
-	<!-- services end  -->
+    <section class="available">
+      <div class="container">
+        <h1>I'm available for freelancer projects</h1>
+        <a href="#info" class="btn">text me</a>
+      </div>
+    </section>
 
-	<!-- available start  -->
+    <!-- available end  -->
 
-	<section class="available">
-		<div class="container">
-			<h1>I'm available for freelancer projects</h1>
-			<a href="#info" class="btn">text me</a>
-		</div>
-	</section>
+    <!-- portfolio start  -->
 
-	<!-- available end  -->
-
-	<!-- portfolio start  -->
-
-	<!-- <section class="portfolio" id="portfolio">
+    <!-- <section class="portfolio" id="portfolio">
 		<div class="heading">
 			<h1>portfolio.</h1>
 			<p>lorem ipsum, dolor sit amet consectetur.</p>
@@ -345,40 +410,40 @@
 		</div>
 	</section> -->
 
-	<!-- portfolio end  -->
+    <!-- portfolio end  -->
 
-	<!-- info start  -->
+    <!-- info start  -->
 
-	<section class="info" id="info">
-		<div class="box-container">
-			<div class="box">
-				<i class="fas fa-home"></i>
-				<h3>home address</h3>
-				<span>Villamor Pasay</span>
-			</div>
-			<div class="box">
-				<i class="fas fa-envelope"></i>
-				<h3>email address</h3>
-				<span>mendozajohnkarl@gmail.com</span>
-			</div>
-			<div class="box">
-				<i class="fas fa-phone"></i>
-				<h3>phone number</h3>
-				<span>+63 977 049 3214</span>
-			</div>
-			<div class="box">
-				<i class="fab fa-facebook-f"></i>
-				<h3>facebook</h3>
-				<span>https://www.facebook.com/dagz.o8</span>
-			</div>
-		</div>
-	</section>
+    <section class="info" id="info">
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-home"></i>
+          <h3>home address</h3>
+          <span>Villamor Pasay</span>
+        </div>
+        <div class="box">
+          <i class="fas fa-envelope"></i>
+          <h3>email address</h3>
+          <span>mendozajohnkarl@gmail.com</span>
+        </div>
+        <div class="box">
+          <i class="fas fa-phone"></i>
+          <h3>phone number</h3>
+          <span>+63 977 049 3214</span>
+        </div>
+        <div class="box">
+          <i class="fab fa-facebook-f"></i>
+          <h3>facebook</h3>
+          <span>https://www.facebook.com/dagz.o8</span>
+        </div>
+      </div>
+    </section>
 
-	<!-- info end  -->
+    <!-- info end  -->
 
-	<!-- testimonials start  -->
+    <!-- testimonials start  -->
 
-	<!-- <section class="testimonials" id="testimonials">
+    <!-- <section class="testimonials" id="testimonials">
 		<div class="testimonials-slider swiper">
 			<div class="swiper-wrapper">
 				<section class="slide swiper-slide">
@@ -422,54 +487,82 @@
 		</div>
 	</section> -->
 
-	<!-- testimonials end  -->
+    <!-- testimonials end  -->
 
+    <!-- contact start  -->
 
+    <section class="contact" id="contact">
+      <div class="heading">
+        <h1>contact me</h1>
+        <p>Villamor Pasay</p>
+      </div>
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Fashion Killa&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
 
-	<!-- contact start  -->
+        <form
+          action="https://formsubmit.co/b4a8188ee587bc7aa1a944506b85af4b"
+          method="POST"
+        >
+          <h3>Get in touch</h3>
+          <input
+            type="text"
+            placeholder="Your Name *"
+            class="form-control box"
+            name="name"
+            id="nameId"
+          />
+          <input
+            type="email"
+            placeholder="Your Email *"
+            class="form-control box"
+            name="email"
+            id="emailId"
+          />
+          <input
+            type="text"
+            placeholder="Subject *"
+            class="form-control box"
+            name="subject"
+            id="subjectId"
+          />
+          <textarea
+            placeholder="Your Message"
+            id="messageId"
+            cols="30"
+            rows="10"
+            class="form-control box"
+            name="message"
+          ></textarea>
+          <input type="submit" class="btn" id="btnSubmit" />
+        </form>
+      </div>
+    </section>
 
-	<section class="contact" id="contact">
-		<div class="heading">
-			<h1>contact me</h1>
-			<p>Villamor Pasay</p>
-		</div>
-		<div class="row">
-			<iframe class="map"
-				src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Fashion Killa&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-				allowfullscreen="" loading="lazy"></iframe>
+    <!-- contact end  -->
 
-				
+    <!-- footer start  -->
 
-			<form action="https://formsubmit.co/b4a8188ee587bc7aa1a944506b85af4b" method="POST">
-				<h3>Get in touch</h3>
-				<input type="text" placeholder="Your Name *" class="form-control box" name="name" id="nameId">
-				<input type="email" placeholder="Your Email *" class="form-control box" name="email" id="emailId">
-				<input type="text" placeholder="Subject *" class="form-control box" name="subject" id="subjectId">
-				<textarea placeholder="Your Message" id="messageId" cols="30" rows="10" class="form-control box" name="message"></textarea>
-				<input type="submit" class="btn" id="btnSubmit">
-			</form>
-		</div>
-	</section>
+    <div class="footer">
+      <div class="credit">Created by Karl Mendoza | All rights reserved</div>
+    </div>
 
-	<!-- contact end  -->
+    <!-- footer end  -->
 
-	<!-- footer start  -->
+    <!-- typed js cdn link  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- swiper js link  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-	<div class="footer">
-		<div class="credit">Created by Karl Mendoza | All rights reserved</div>
-	</div>
-
-	<!-- footer end  -->
-
-	<!-- typed js cdn link  -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-		referrerpolicy="no-referrer"></script>
-	<!-- swiper js link  -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-	<!-- custom js file link  -->
-	<script src="./js/script.js"></script>
-</body>
-
+    <!-- custom js file link  -->
+    <script src="./js/script.js"></script>
+  </body>
 </html>
