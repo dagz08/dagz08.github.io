@@ -21,6 +21,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+
     <title>Karl Mendoza</title>
   </head>
 
@@ -36,6 +40,8 @@
         <div class="navbar">
           <a href="#home">Home</a>
           <a href="#about">About</a>
+          <a href="#profile">Profile</a>
+          <a href="#skills">Skills</a>
           <a href="#services">Services</a>
           <!-- <a href="#portfolio">Portfolio</a> -->
           <!-- <a href="#testimonials">Testimonials</a> -->
@@ -53,7 +59,6 @@
         <h3>Hello, my name is</h3>
         <h1>Karl Mendoza</h1>
         <p>and I'm a <span class="typing"></span> Developer</p>
-        <!-- <button class="btn" id="downloadCV">Download CV</button> -->
         <a
           href="cv/KarlMendozaCV_2024.pdf"
           class="karlCv"
@@ -93,7 +98,7 @@
         <div class="content">
           <div class="flex">
             <span class="details-btn active">details</span>
-            <span class="skills-btn">skills</span>
+
             <!-- <span class="more-btn">more</span> -->
           </div>
           <div class="column">
@@ -117,133 +122,6 @@
                 boundaries of what can be achieved in the digital realm.
               </p>
             </div>
-            <div class="skills">
-              <ul class="progress-list">
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    • C# (advanced OOP, async/await, LINQ, generics, delegates,
-                    events)
-                    • .NET Core / .NET 6–9
-                    <span>95 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 95%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>C# .NET</p>
-                    <span>95 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 95%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>.NET MVC / .NET CORE / MICROSERVICES</p>
-                    <span>95 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 95%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>Javascript / JQuery / Angular</p>
-                    <span>90 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 85%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>HTML5 / CSS3 / Javascript / TypeScript</p>
-                    <span>90 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 90%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>MS SQL Database</p>
-                    <span>95 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 95%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>ENTITY FRAMEWORK / DAPPER / LINQ</p>
-                    <span>95 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 95%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>API GATEWAY OCELOT / YARP</p>
-                    <span>95 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 95%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>GIT/SVN</p>
-                    <span>90 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 90%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>JIRA/TRACK</p>
-                    <span>90 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 90%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-                <li class="progress-item">
-                  <div class="label-wrapper">
-                    <p>Web API/Rest API</p>
-                    <span>90 %</span>
-                  </div>
-                  <div class="progress">
-                    <div
-                      class="progress-fill"
-                      style="width: 90%; background-color: #1bbca8"></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -253,7 +131,7 @@
 
     <!-- projects counter start  -->
 
-    <section class="projects-counter">
+    <section class="projects-counter" id="profile">
       <div>
         <h1 class="fontWhite">Profile</h1>
       </div>
@@ -278,6 +156,226 @@
           <i class="fa-solid fa-mug-hot"></i>
           <span>1432</span>
           <h3>coffee taken</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="listed-skills py-5" id="skills">
+      <div class="container">
+        <h1 class="text-center text-white mb-4">My Technical Expertise</h1>
+        <h3 class="text-center text-blue mb-4">
+          (Click the card for further details)
+        </h2>
+        <div class="row g-4 justify-content-center">
+          <!-- 1 .NET Development -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                    class="flip-img" />
+                  <h4>.NET & Programming Expertise</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <h3>🖥️ C#</h3>
+                    <li style="margin-bottom: 20px;">🛠 Advanced C# (Generics, Delegates/Events, LINQ, Tasks, async/await)</li>
+                    <li style="margin-bottom: 20px;">🛠 .NET 6–9 / .NET Core architecture</li>
+                    <li style="margin-bottom: 20px;">🔧 ASP.NET Core (REST APIs, MVC, Minimal APIs, Middleware)</li>
+                    <li style="margin-bottom: 20px;">📦 Dependency Injection</li>
+                    <li style="margin-bottom: 20px;">🗂️ .NET Microservices</li>
+                    <li style="margin-bottom: 20px;">🗄️ Entity Framework Core, Dapper, SQL performance tuning</li>
+                    <li style="margin-bottom: 20px;">⚙️ Asynchronous, multithreading & parallel programming</li>
+                    <li style="margin-bottom: 20px;">🏗️ Design Patterns (Factory, Singleton, Strategy, CQRS, etc.)</li>
+                    <li style="margin-bottom: 20px;">🧹 SOLID principles, Clean Code, Refactoring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 Frontend Development -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                    class="flip-img" />
+                  <h4>Front-End Web Development</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <!-- Angular -->
+                    <h3>🅰️ Angular</h3>
+                    <li style="margin-bottom: 20px;">👨🏻‍💻 Angular (v16+) components, services & dependency injection</li>
+                    <li style="margin-bottom: 20px;">🔁 RxJS & Observables</li>
+                    <li style="margin-bottom: 20px;">🛠️ Angular CLI, Routing, Forms (Reactive & Template-driven)</li>
+                    <li style="margin-bottom: 20px;">🧠 State management (NgRx or alternative)</li>
+                    <li style="margin-bottom: 20px;">🔗 Angular + .NET API integration patterns</li>
+
+                    <!-- JavaScript / TypeScript -->
+                    <li style="margin-bottom: 20px;">📜 JavaScript / TypeScript</li>
+                    <li style="margin-bottom: 20px;">✨ Modern ES6+ features</li>
+                    <li style="margin-bottom: 20px;">🏷️ TypeScript strongly typed development</li>
+                    <li style="margin-bottom: 20px;">📦 Webpack, bundlers & build pipelines</li>
+
+                    <!-- UI/UX & Styling -->
+                    <li style="margin-bottom: 20px;">🎨 UI/UX & Styling</li>
+                    <li style="margin-bottom: 20px;">📱 Responsive layouts (Bootstrap, TailwindCSS)</li>
+                    <li style="margin-bottom: 20px;">🧵 SCSS/CSS3, Flex & Grid layouts</li>
+                    <li style="margin-bottom: 20px;">♿ Accessibility & cross-browser compatibility</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Cloud & DevOps -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                    class="flip-img" />
+                  <h4>Cloud & DevOps</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <h3>☁️ Azure Cloud</h3>
+                    <li style="margin-bottom: 20px;">𝓕 Azure App Services, Azure Functions</li>
+                    <li style="margin-bottom: 20px;">🗄️ Azure Storage (Blob, Table, Queue) & Azure SQL / Cosmos DB</li>
+                    <li style="margin-bottom: 20px;">📨 Azure Service Bus, Event Grid, Event Hub</li>
+                    <li style="margin-bottom: 20px;">🐳 Azure Kubernetes Service (AKS) & containerisation (Docker)</li>
+                    <li style="margin-bottom: 20px;">📐 Infrastructure as Code (IaC): ARM templates, Terraform</li>
+                    <li style="margin-bottom: 20px;">🛠️ Azure DevOps (Repos, Pipelines, Artifacts) / GitHub Actions</li>
+                    <li style="margin-bottom: 20px;">⚡ Continuous Integration & Continuous Deployment (CI/CD) automation</li>
+                    <li style="margin-bottom: 20px;">📊 Monitoring & logging: Azure Monitor, Application Insights, Log Analytics</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Database Technologies -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                    class="flip-img" />
+                  <h4>Database</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <h3>🛢 SQL Server</h3>
+                    <li style="margin-bottom: 20px;">📝 Advanced T-SQL: queries, joins, subqueries, window functions</li>
+                    <li style="margin-bottom: 20px;">⚡ Stored procedures, triggers, functions, Views</li>
+                    <li style="margin-bottom: 20px;">📈 Indexing strategies, query optimization, and execution plan analysis</li>
+                    <li style="margin-bottom: 20px;">🏗️ Database design and normalization / denormalization</li>
+                    <li style="margin-bottom: 20px;">🔒 Transactions, locking, isolation levels, and concurrency handling</li>
+                    <li style="margin-bottom: 20px;">💾 Backup, restore, and disaster recovery strategies</li>
+                    <li style="margin-bottom: 20px;">🛡️ Security: roles, permissions, encryption, auditing</li>
+                    <li style="margin-bottom: 20px;">📊 Performance monitoring and tuning (SQL Profiler, Query Store, Execution Plans)</li>
+                    <li style="margin-bottom: 20px;">🔄 Code First Migration or Database First Migration, Data migration and ETL knowledge, </li>
+                    <li style="margin-bottom: 20px;">🔗 Dapper / EF Core / ADO .NET</li>
+                    <li style="margin-bottom: 20px;">🔄 LINQ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 API & Integrations -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                    class="flip-img" />
+                  <h4>API & Integration</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <li>🚀 REST Services</li>
+                    <li>🛡️ API Gawateway Ocelot / YARP</li>
+                    <li>🛠️ Auth & Middleware</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 Architecture -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                    class="flip-img" />
+                  <h4>Architecture</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <li>
+                      🗺️ Clean Architecture
+                    </li>
+                    <li>🧄 Onion Architecture</li>
+                    <li>🧩 Design Patterns</li>
+                    <li>✍ Test Driven Development</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 Tools & Workflow -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    class="flip-img" />
+                  <h4>Tools & Workflow</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <li>⚡ Git / Version Control</li>
+                    <li>📋 Jira</li>
+                    <li>🖥️ Visual Studio</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 Professional Skills -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    class="flip-img" />
+                  <h4>Professional Skills</h4>
+                </div>
+                <div class="flip-back">
+                  <ul class="skill-list">
+                    <li><i class="bi bi-people"></i> Collaboration</li>
+                    <li><i class="bi bi-lightbulb"></i> Problem Solving</li>
+                    <li><i class="bi bi-chat-left-text"></i> Communication</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -323,94 +421,43 @@
       </div>
     </section>
 
-    <!-- services end  -->
-
-    <!-- available start  -->
-
     <section class="available">
-      <div class="container">
-        <h1>I'm available for freelancer projects</h1>
-        <a href="#info" class="btn">text me</a>
+      <div class="main-section">
+        <h1 style="margin-bottom: 20px;">I'm available for freelancer projects</h1>
+        <button id="openModal" class="contact-btn">📧 Message Me</button>
       </div>
+
+      <div id="contactModal" class="modal modal-body-force">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="margin-bottom: 20px;">Contact Me</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+        <p id="response-message"></p>
+      </div>
+    </div>
     </section>
-
-    <!-- available end  -->
-
-    <!-- portfolio start  -->
-
-    <!-- <section class="portfolio" id="portfolio">
-		<div class="heading">
-			<h1>portfolio.</h1>
-			<p>lorem ipsum, dolor sit amet consectetur.</p>
-		</div>
-
-		<div class="box-container">
-			<div class="box">
-				<div class="image">
-					<img src="./images/p1.jpg" alt="">
-				</div>
-				<div class="content">
-					<i class="fa-solid fa-camera"></i>
-					<h3>graphic desgin</h3>
-					<span>desgin</span>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="./images/p2.jpg" alt="">
-				</div>
-				<div class="content">
-					<i class="fa-solid fa-camera"></i>
-					<h3>graphic desgin</h3>
-					<span>desgin</span>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="./images/p3.jpg" alt="">
-				</div>
-				<div class="content">
-					<i class="fa-solid fa-camera"></i>
-					<h3>graphic desgin</h3>
-					<span>desgin</span>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="./images/p4.jpg" alt="">
-				</div>
-				<div class="content">
-					<i class="fa-solid fa-camera"></i>
-					<h3>graphic desgin</h3>
-					<span>desgin</span>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="./images/p5.jpg" alt="">
-				</div>
-				<div class="content">
-					<i class="fa-solid fa-camera"></i>
-					<h3>graphic desgin</h3>
-					<span>desgin</span>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="./images/p6.jpg" alt="">
-				</div>
-				<div class="content">
-					<i class="fa-solid fa-camera"></i>
-					<h3>graphic desgin</h3>
-					<span>desgin</span>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-    <!-- portfolio end  -->
-
-    <!-- info start  -->
 
     <section class="info" id="info">
       <div class="box-container">
@@ -437,102 +484,21 @@
       </div>
     </section>
 
-    <!-- info end  -->
-
-    <!-- testimonials start  -->
-
-    <!-- <section class="testimonials" id="testimonials">
-		<div class="testimonials-slider swiper">
-			<div class="swiper-wrapper">
-				<section class="slide swiper-slide">
-					<div class="quote">
-						<i class="fa-solid fa-quote-left"></i>
-					</div>
-					<div class="image">
-						<img src="./images/t1.jpeg" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, minima, totam voluptatem, officia
-						cumque
-						ipsam quibusdam facilis quaerat quidem ad sunt quod? Quia nam amet atque eius veritatis fugit iste!</p>
-					<span>- john smith</span>
-				</section>
-				<section class="slide swiper-slide">
-					<div class="quote">
-						<i class="fa-solid fa-quote-left"></i>
-					</div>
-					<div class="image">
-						<img src="./images/t2.jpeg" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, minima, totam voluptatem, officia
-						cumque
-						ipsam quibusdam facilis quaerat quidem ad sunt quod? Quia nam amet atque eius veritatis fugit iste!</p>
-					<span>- john smith</span>
-				</section>
-				<section class="slide swiper-slide">
-					<div class="quote">
-						<i class="fa-solid fa-quote-left"></i>
-					</div>
-					<div class="image">
-						<img src="./images/t3.jpeg" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, minima, totam voluptatem, officia
-						cumque
-						ipsam quibusdam facilis quaerat quidem ad sunt quod? Quia nam amet atque eius veritatis fugit iste!</p>
-					<span>- john smith</span>
-				</section>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-	</section> -->
-
-    <!-- testimonials end  -->
-
     <!-- contact start  -->
 
     <section class="contact" id="contact">
       <div class="heading">
-        <h1>contact me</h1>
+        <h1>Location</h1>
         <p>Villamor Pasay</p>
       </div>
-      <div class="row">
-        <iframe
-          class="map"
-          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Fashion Killa&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          allowfullscreen=""
-          loading="lazy"></iframe>
-
-        <form
-          action="https://formsubmit.co/b4a8188ee587bc7aa1a944506b85af4b"
-          method="POST">
-          <h3>Get in touch</h3>
-          <input
-            type="text"
-            placeholder="Your Name *"
-            class="form-control box"
-            name="name"
-            id="nameId" />
-          <input
-            type="email"
-            placeholder="Your Email *"
-            class="form-control box"
-            name="email"
-            id="emailId" />
-          <input
-            type="text"
-            placeholder="Subject *"
-            class="form-control box"
-            name="subject"
-            id="subjectId" />
-          <textarea
-            placeholder="Your Message"
-            id="messageId"
-            cols="30"
-            rows="10"
-            class="form-control box"
-            name="message"></textarea>
-          <input type="submit" class="btn" id="btnSubmit" />
-        </form>
-      </div>
+      <div class="map-container">
+  <iframe
+    class="map"
+    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Fashion Killa&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
     </section>
 
     <!-- contact end  -->
@@ -552,6 +518,7 @@
     <!-- swiper js link  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <!-- custom js file link  -->
     <script src="./js/script.js"></script>
