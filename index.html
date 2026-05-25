@@ -1,170 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="./css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- swiper css link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <!-- swiper css link  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <!-- font awesome cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <title>Karl Mendoza</title>
-  </head>
+  <title>Karl Mendoza</title>
+</head>
 
-  <body>
-    <!-- header start  -->
+<body>
+  <!-- header start  -->
 
-    <header class="header">
-      <div class="container">
-        <a href="#home" class="logo">KM</a>
+  <header class="header">
+    <div class="container">
+      <a href="#home" class="logo">KM</a>
 
-        <div id="menu-bar" class="fas fa-bars"></div>
+      <div id="menu-bar" class="fas fa-bars"></div>
 
-        <div class="navbar">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#profile">Profile</a>
-          <a href="#skills">Skills</a>
-          <a href="#services">Services</a>
-          <!-- <a href="#portfolio">Portfolio</a> -->
-          <!-- <a href="#testimonials">Testimonials</a> -->
-          <a href="#location">Location</a>
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <!-- <a href="#portfolio">Portfolio</a> -->
+        <!-- <a href="#testimonials">Testimonials</a> -->
+        <a href="#location">Location</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- header end  -->
+
+  <!-- home start  -->
+
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <p class="hello">Hello, my name is</p>
+      <h1 class="name">Karl Mendoza</h1>
+      <p>and I'm a <span class="typing"></span> Developer</p>
+      <a href="cv/KarlMendozaCV_2026.pdf" class="karlCv" download="KarlMendozaCV_2026.pdf">Download CV</a>
+    </div>
+    <div class="hero-right">
+      <canvas id="threeCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- home end  -->
+
+  <!-- about start  -->
+
+  <section class="about" id="about">
+    <div class="heading">
+      <h1>About me !</h1>
+    </div>
+
+    <div class="container">
+      <div class="image">
+        <img src="./images/Karl.jpg" alt="" />
+        <div class="overlay">
+          <div class="share">
+            <a href="https://www.facebook.com/dagz.o8" class="fab fa-facebook-f"></a>
+            <a href="https://www.linkedin.com/in/john-karl-mendoza-67ab73216/" class="fab fa-linkedin"></a>
+            <a href="https://www.instagram.com/dagzzzzzzz/" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-google"></a>
+          </div>
         </div>
       </div>
-    </header>
-
-    <!-- header end  -->
-
-    <!-- home start  -->
-
-    <section class="home" id="home">
       <div class="content">
-        <h3>Hello, my name is</h3>
-        <h1>Karl Mendoza</h1>
-        <p>and I'm a <span class="typing"></span> Developer</p>
-        <a
-          href="cv/KarlMendozaCV_2026.pdf"
-          class="karlCv"
-          download="KarlMendozaCV_2026.pdf"
-          >Download CV</a
-        >
-      </div>
-    </section>
+        <div class="flex">
+          <span class="details-btn active">details</span>
 
-    <!-- home end  -->
-
-    <!-- about start  -->
-
-    <section class="about" id="about">
-      <div class="heading">
-        <h1>About me !</h1>
-      </div>
-
-      <div class="container">
-        <div class="image">
-          <img src="./images/Karl.jpg" alt="" />
-          <div class="overlay">
-            <div class="share">
-              <a
-                href="https://www.facebook.com/dagz.o8"
-                class="fab fa-facebook-f"></a>
-              <a
-                href="https://www.linkedin.com/in/john-karl-mendoza-67ab73216/"
-                class="fab fa-linkedin"></a>
-              <a
-                href="https://www.instagram.com/dagzzzzzzz/"
-                class="fab fa-instagram"></a>
-              <a href="#" class="fab fa-google"></a>
-            </div>
-          </div>
+          <!-- <span class="more-btn">more</span> -->
         </div>
-        <div class="content">
-          <div class="flex">
-            <span class="details-btn active">details</span>
-
-            <!-- <span class="more-btn">more</span> -->
-          </div>
-          <div class="column">
-            <div class="details active">
-              <h3>About me.</h3>
-              <p>
-                Allow me to introduce you to a talented developer and puzzle
-                enthusiast. Meet Karl, a passionate individual who has found
-                their calling in the world of coding. At age 15, Karl possesses
-                an insatiable curiosity for all things related to technology and
-                problem-solving. With an unwavering love for puzzles, Karl
-                embraces the challenge of unraveling complex codes and finding
-                innovative solutions to intricate problems. His sharp analytical
-                skills and attention to detail enable him to dive deep into the
-                depths of coding languages, crafting elegant and efficient
-                solutions. Whether it's debugging intricate lines of code or
-                piecing together a mind-boggling puzzle, Karl tackles each
-                challenge with enthusiasm and determination. With his unique
-                blend of creativity and technical prowess, Karl is not only a
-                developer but a master puzzle solver, continuously pushing the
-                boundaries of what can be achieved in the digital realm.
-              </p>
-            </div>
+        <div class="column">
+          <div class="details active">
+            <h3>About me.</h3>
+            <p>
+              Allow me to introduce you to a talented developer and puzzle
+              enthusiast. Meet Karl, a passionate individual who has found
+              their calling in the world of coding. At age 15, Karl possesses
+              an insatiable curiosity for all things related to technology and
+              problem-solving. With an unwavering love for puzzles, Karl
+              embraces the challenge of unraveling complex codes and finding
+              innovative solutions to intricate problems. His sharp analytical
+              skills and attention to detail enable him to dive deep into the
+              depths of coding languages, crafting elegant and efficient
+              solutions. Whether it's debugging intricate lines of code or
+              piecing together a mind-boggling puzzle, Karl tackles each
+              challenge with enthusiasm and determination. With his unique
+              blend of creativity and technical prowess, Karl is not only a
+              developer but a master puzzle solver, continuously pushing the
+              boundaries of what can be achieved in the digital realm.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- about end  -->
+  <!-- about end  -->
 
-    <!-- projects counter start  -->
+  <!-- projects counter start  -->
 
-    <section class="projects-counter" id="profile">
-      <div>
-        <h1 class="fontWhite">Profile</h1>
+  <section class="projects-counter" id="profile">
+    <div>
+      <h1 class="fontWhite">Profile</h1>
+    </div>
+    <div class="box-container">
+      <div class="box">
+        <i class="fa-brands fa-steam"></i>
+        <span>Gaming</span>
+        <h3>Dota 2</h3>
+        <h3>CS GO</h3>
       </div>
-      <div class="box-container">
-        <div class="box">
-          <i class="fa-brands fa-steam"></i>
-          <span>Gaming</span>
-          <h3>Dota 2</h3>
-          <h3>CS GO</h3>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-clock"></i>
-          <span>9 Years</span>
-          <h3>years of experience</h3>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span>30</span>
-          <h3>projects done</h3>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-mug-hot"></i>
-          <span>1432</span>
-          <h3>coffee taken</h3>
-        </div>
+      <div class="box">
+        <i class="fa-solid fa-clock"></i>
+        <span>9 Years</span>
+        <h3>years of experience</h3>
       </div>
-    </section>
+      <div class="box">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>30</span>
+        <h3>projects done</h3>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>1432</span>
+        <h3>coffee taken</h3>
+      </div>
+    </div>
+  </section>
 
-    <section class="listed-skills py-5" id="skills">
-      <div class="container">
-        <h1 class="text-center text-white mb-4">My Technical Expertise</h1>
-        <h3 class="text-center text-blue mb-4">
-          (Click the card for further details)
+  <section class="listed-skills py-5" id="skills">
+    <div class="container">
+      <h1 class="text-center text-white mb-4">My Technical Expertise</h1>
+      <h3 class="text-center text-blue mb-4">
+        (Click the cards for further details)
         </h2>
         <div class="row g-4 justify-content-center">
           <!-- 1 .NET Development -->
@@ -172,15 +160,15 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
                     class="flip-img" />
                   <h4>.NET & Programming Expertise</h4>
                 </div>
                 <div class="flip-back">
                   <ul class="skill-list">
                     <h3>🖥️ C#</h3>
-                    <li style="margin-bottom: 20px;">🛠 Advanced C# (Generics, Delegates/Events, LINQ, Tasks, async/await)</li>
+                    <li style="margin-bottom: 20px;">🛠 Advanced C# (Generics, Delegates/Events, LINQ, Tasks,
+                      async/await)</li>
                     <li style="margin-bottom: 20px;">🛠 .NET 6–9 / .NET Core architecture</li>
                     <li style="margin-bottom: 20px;">🔧 ASP.NET Core (REST APIs, MVC, Minimal APIs, Middleware)</li>
                     <li style="margin-bottom: 20px;">📦 Dependency Injection</li>
@@ -200,8 +188,7 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
                     class="flip-img" />
                   <h4>Front-End Web Development</h4>
                 </div>
@@ -209,7 +196,8 @@
                   <ul class="skill-list">
                     <!-- Angular -->
                     <h3>🅰️ Angular</h3>
-                    <li style="margin-bottom: 20px;">👨🏻‍💻 Angular (v16+) components, services & dependency injection</li>
+                    <li style="margin-bottom: 20px;">👨🏻‍💻 Angular (v16+) components, services & dependency injection
+                    </li>
                     <li style="margin-bottom: 20px;">🔁 RxJS & Observables</li>
                     <li style="margin-bottom: 20px;">🛠️ Angular CLI, Routing, Forms (Reactive & Template-driven)</li>
                     <li style="margin-bottom: 20px;">🧠 State management (NgRx or alternative)</li>
@@ -237,8 +225,7 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
                     class="flip-img" />
                   <h4>Cloud & DevOps</h4>
                 </div>
@@ -250,9 +237,12 @@
                     <li style="margin-bottom: 20px;">📨 Azure Service Bus, Event Grid, Event Hub</li>
                     <li style="margin-bottom: 20px;">🐳 Azure Kubernetes Service (AKS) & containerisation (Docker)</li>
                     <li style="margin-bottom: 20px;">📐 Infrastructure as Code (IaC): ARM templates, Terraform</li>
-                    <li style="margin-bottom: 20px;">🛠️ Azure DevOps (Repos, Pipelines, Artifacts) / GitHub Actions</li>
-                    <li style="margin-bottom: 20px;">⚡ Continuous Integration & Continuous Deployment (CI/CD) automation</li>
-                    <li style="margin-bottom: 20px;">📊 Monitoring & logging: Azure Monitor, Application Insights, Log Analytics</li>
+                    <li style="margin-bottom: 20px;">🛠️ Azure DevOps (Repos, Pipelines, Artifacts) / GitHub Actions
+                    </li>
+                    <li style="margin-bottom: 20px;">⚡ Continuous Integration & Continuous Deployment (CI/CD) automation
+                    </li>
+                    <li style="margin-bottom: 20px;">📊 Monitoring & logging: Azure Monitor, Application Insights, Log
+                      Analytics</li>
                   </ul>
                 </div>
               </div>
@@ -272,15 +262,20 @@
                 <div class="flip-back">
                   <ul class="skill-list">
                     <h3>🛢 SQL Server</h3>
-                    <li style="margin-bottom: 20px;">📝 Advanced T-SQL: queries, joins, subqueries, window functions</li>
+                    <li style="margin-bottom: 20px;">📝 Advanced T-SQL: queries, joins, subqueries, window functions
+                    </li>
                     <li style="margin-bottom: 20px;">⚡ Stored procedures, triggers, functions, Views</li>
-                    <li style="margin-bottom: 20px;">📈 Indexing strategies, query optimization, and execution plan analysis</li>
+                    <li style="margin-bottom: 20px;">📈 Indexing strategies, query optimization, and execution plan
+                      analysis</li>
                     <li style="margin-bottom: 20px;">🏗️ Database design and normalization / denormalization</li>
-                    <li style="margin-bottom: 20px;">🔒 Transactions, locking, isolation levels, and concurrency handling</li>
+                    <li style="margin-bottom: 20px;">🔒 Transactions, locking, isolation levels, and concurrency
+                      handling</li>
                     <li style="margin-bottom: 20px;">💾 Backup, restore, and disaster recovery strategies</li>
                     <li style="margin-bottom: 20px;">🛡️ Security: roles, permissions, encryption, auditing</li>
-                    <li style="margin-bottom: 20px;">📊 Performance monitoring and tuning (SQL Profiler, Query Store, Execution Plans)</li>
-                    <li style="margin-bottom: 20px;">🔄 Code First Migration or Database First Migration, Data migration and ETL knowledge, </li>
+                    <li style="margin-bottom: 20px;">📊 Performance monitoring and tuning (SQL Profiler, Query Store,
+                      Execution Plans)</li>
+                    <li style="margin-bottom: 20px;">🔄 Code First Migration or Database First Migration, Data migration
+                      and ETL knowledge, </li>
                     <li style="margin-bottom: 20px;">🔗 Dapper / EF Core / ADO .NET</li>
                     <li style="margin-bottom: 20px;">🔄 LINQ</li>
                   </ul>
@@ -294,8 +289,7 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
                     class="flip-img" />
                   <h4>API Security & Integration</h4>
                 </div>
@@ -319,8 +313,7 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
                     class="flip-img" />
                   <h4>Software Architecture</h4>
                 </div>
@@ -332,7 +325,8 @@
                     <li style="margin-bottom: 20px;">⚡ Event-Driven Architecture & Messaging Patterns</li>
                     <li style="margin-bottom: 20px;">🌐 API Gateways (Ocelot, YARP, Azure API Management)</li>
                     <li style="margin-bottom: 20px;">📦 DDD (Aggregates, Value Objects, Bounded Contexts)</li>
-                    <li style="margin-bottom: 20px;">🔗 Distributed Systems (Caching, Resiliency, Eventual Consistency)</li>
+                    <li style="margin-bottom: 20px;">🔗 Distributed Systems (Caching, Resiliency, Eventual Consistency)
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -344,9 +338,7 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                    class="flip-img" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="flip-img" />
                   <h4>Tools & Workflow</h4>
                 </div>
                 <div class="flip-back">
@@ -366,9 +358,7 @@
             <div class="flip-card">
               <div class="flip-inner">
                 <div class="flip-front">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-                    class="flip-img" />
+                  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="flip-img" />
                   <h4>Professional Skills</h4>
                 </div>
                 <div class="flip-back">
@@ -388,57 +378,57 @@
             </div>
           </div>
         </div>
+    </div>
+  </section>
+
+  <!-- projects counter end  -->
+
+  <!-- services start  -->
+
+  <section class="services" id="services">
+    <div class="heading">
+      <h1>What I Do?</h1>
+      <p>Full Stack Development</p>
+    </div>
+
+    <div class="box-container">
+      <div class="box">
+        <i class="fa-solid fa-paintbrush"></i>
+        <h3>Web Development</h3>
+        <p>
+          I create web applications for small to large scales businesses from
+          start to finish. This includes front-end and back-end development,
+          API development, database management and more.
+        </p>
       </div>
-    </section>
-
-    <!-- projects counter end  -->
-
-    <!-- services start  -->
-
-    <section class="services" id="services">
-      <div class="heading">
-        <h1>What I Do?</h1>
-        <p>Full Stack Development</p>
+      <div class="box">
+        <i class="fa-solid fa-code"></i>
+        <h3>Desktop App Development</h3>
+        <p>
+          I create stand alone desktop applications such as RFID Attendance
+          System, Payroll System, Reporting tools and integrations with other
+          systems or services.
+        </p>
       </div>
-
-      <div class="box-container">
-        <div class="box">
-          <i class="fa-solid fa-paintbrush"></i>
-          <h3>Web Development</h3>
-          <p>
-            I create web applications for small to large scales businesses from
-            start to finish. This includes front-end and back-end development,
-            API development, database management and more.
-          </p>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-code"></i>
-          <h3>Desktop App Development</h3>
-          <p>
-            I create stand alone desktop applications such as RFID Attendance
-            System, Payroll System, Reporting tools and integrations with other
-            systems or services.
-          </p>
-        </div>
-        <div class="box">
-          <i class="fa-brands fa-sistrix"></i>
-          <h3>Consulting</h3>
-          <p>
-            I design and architect software solutions. This includes designing
-            the system's structure, database schemas, user interfaces, and
-            integrations with other systems or services.
-          </p>
-        </div>
+      <div class="box">
+        <i class="fa-brands fa-sistrix"></i>
+        <h3>Consulting</h3>
+        <p>
+          I design and architect software solutions. This includes designing
+          the system's structure, database schemas, user interfaces, and
+          integrations with other systems or services.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="available">
-      <div class="main-section">
-        <h1 style="margin-bottom: 20px;">I'm available for freelancer projects</h1>
-        <button id="openModal" class="contact-btn">📧 Message Me</button>
-      </div>
+  <section class="available">
+    <div class="main-section">
+      <h1 style="margin-bottom: 20px;">I'm available for freelancer projects</h1>
+      <button id="openModal" class="contact-btn">📧 Message Me</button>
+    </div>
 
-      <div id="contactModal" class="modal modal-body-force">
+    <div id="contactModal" class="modal modal-body-force">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2 style="margin-bottom: 20px;">Contact Me</h2>
@@ -468,70 +458,70 @@
         <p id="response-message"></p>
       </div>
     </div>
-    </section>
+  </section>
 
-    <section class="info" id="info">
-      <div class="box-container">
-        <div class="box">
-          <i class="fas fa-home"></i>
-          <h3>home address</h3>
-          <span>Villamor Pasay</span>
-        </div>
-        <div class="box">
-          <i class="fas fa-envelope"></i>
-          <h3>email address</h3>
-          <span>mendozajohnkarl@gmail.com</span>
-        </div>
-        <div class="box">
-          <i class="fas fa-phone"></i>
-          <h3>phone number</h3>
-          <span>+63 977 049 3214</span>
-        </div>
-        <div class="box">
-          <i class="fab fa-facebook-f"></i>
-          <h3>facebook</h3>
-          <span>https://www.facebook.com/dagz.o8</span>
-        </div>
+  <section class="info" id="info">
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-home"></i>
+        <h3>home address</h3>
+        <span>Villamor Pasay</span>
       </div>
-    </section>
-
-    <!-- contact start  -->
-
-    <section class="contact" id="location">
-      <div class="heading">
-        <h1>Location</h1>
-        <p>Villamor Pasay</p>
+      <div class="box">
+        <i class="fas fa-envelope"></i>
+        <h3>email address</h3>
+        <span>mendozajohnkarl@gmail.com</span>
       </div>
-      <div class="map-container">
-  <iframe
-    class="map"
-    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Fashion Killa&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
-</div>
-    </section>
-
-    <!-- contact end  -->
-
-    <!-- footer start  -->
-
-    <div class="footer">
-      <div class="credit">Created by Karl Mendoza | All rights reserved</div>
+      <div class="box">
+        <i class="fas fa-phone"></i>
+        <h3>phone number</h3>
+        <span>+63 977 049 3214</span>
+      </div>
+      <div class="box">
+        <i class="fab fa-facebook-f"></i>
+        <h3>facebook</h3>
+        <span>https://www.facebook.com/dagz.o8</span>
+      </div>
     </div>
+  </section>
 
-    <!-- footer end  -->
+  <!-- contact start  -->
 
-    <!-- typed js cdn link  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-      referrerpolicy="no-referrer"></script>
-    <!-- swiper js link  -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <section class="contact" id="location">
+    <div class="heading">
+      <h1>Location</h1>
+      <p>Villamor Pasay</p>
+    </div>
+    <div class="map-container">
+      <iframe class="map"
+        src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Fashion Killa&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
 
-    <!-- custom js file link  -->
-    <script src="./js/script.js"></script>
-  </body>
+  <!-- contact end  -->
+
+  <!-- footer start  -->
+
+  <div class="footer">
+    <div class="credit">Created by Karl Mendoza | All rights reserved</div>
+  </div>
+
+  <!-- footer end  -->
+
+  <!-- typed js cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
+  <!-- swiper js link  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="./js/app.js"></script>
+
+</body>
+
 </html>
