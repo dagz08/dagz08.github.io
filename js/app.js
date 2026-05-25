@@ -290,11 +290,81 @@ window.addEventListener("click", (e) => {
   }
 });
 
+
+//Form validations
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const inputs = form.querySelectorAll("input, textarea");
+
+  // Email regex pattern
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+
+  // Create error message element for each field
+  inputs.forEach(input => {
+    const error = document.createElement("small");
+    error.className = "error-message";
+    error.style.color = "red";
+    error.style.display = "none";
+    input.parentNode.appendChild(error);
+
+    // Validate on blur (when leaving the field)
+    input.addEventListener("blur", function () {
+      validateField(input, error);
+    });
+
+    // Optional: live validation while typing
+    input.addEventListener("input", function () {
+      if (error.style.display === "block") {
+        validateField(input, error);
+      }
+    });
+  });
+
+  // Final check on submit
+  form.addEventListener("submit", function (e) {
+    let valid = true;
+    inputs.forEach(input => {
+      const error = input.parentNode.querySelector(".error-message");
+      if (!validateField(input, error)) {
+        valid = false;
+      }
+    });
+
+    if (!valid) {
+      e.preventDefault(); // stop submission if invalid
+    }
+  });
+
+  // Validation function
+  function validateField(input, error) {
+    const value = input.value.trim();
+
+    if (!value) {
+      error.textContent = `${input.previousElementSibling.textContent} is required.`;
+      error.style.display = "block";
+      input.style.borderColor = "red";
+      return false;
+    }
+
+    if (input.type === "email" && !emailPattern.test(value)) {
+      error.textContent = "Please enter a valid email address.";
+      error.style.display = "block";
+      input.style.borderColor = "red";
+      return false;
+    }
+
+    error.textContent = "";
+    error.style.display = "none";
+    input.style.borderColor = "#ccc";
+    return true;
+  }
+});
+
 // Handle Form Submission
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
-
   const responseMessage = document.getElementById("response-message");
+  const modal = document.getElementById("contactModal"); // reference your modal
 
   emailjs.send("service_8u7gzns", "template_ohznp8p", {
     name: document.getElementById("name").value,
@@ -306,6 +376,12 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       responseMessage.textContent = "✅ Your message has been sent successfully!";
       responseMessage.style.color = "green";
       document.getElementById("contact-form").reset();
+
+      // Wait 3 seconds, then clear message and close modal
+      setTimeout(() => {
+        responseMessage.textContent = "";
+        modal.style.display = "none";
+      }, 2000);
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -313,6 +389,12 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       responseMessage.style.color = "red";
     });
 });
+
+
+
+
+
+
 
 
 

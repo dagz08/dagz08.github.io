@@ -1202,3 +1202,153 @@ textarea:focus {
 	height: 100%;
 	display: block
 }
+
+
+
+/* General modal overlay */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+}
+
+/* Modal content box */
+.modal-content {
+	background: #fff;
+	margin: auto;
+	padding: 20px;
+	border-radius: 8px;
+	max-width: 600px;
+	width: 100%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button */
+.close {
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover {
+	color: #e74c3c;
+}
+
+/* Form styling */
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	border-color: #007BFF;
+	outline: none;
+}
+
+/* Buttons */
+.contact-btn,
+.send-btn {
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	padding: 12px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.contact-btn:hover,
+.send-btn:hover {
+	background-color: #0056b3;
+}
+
+/* Response message */
+#response-message {
+	margin-top: 15px;
+	font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.modal-content {
+		max-width: 90%;
+		padding: 15px;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		font-size: 14px;
+	}
+
+	.contact-btn,
+	.send-btn {
+		width: 100%;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.modal-content {
+		max-width: 100%;
+		padding: 10px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.form-group label {
+		font-size: 14px;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		font-size: 13px;
+		padding: 8px;
+	}
+
+	.contact-btn,
+	.send-btn {
+		font-size: 14px;
+		padding: 10px;
+	}
+}
+
+/* Animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
