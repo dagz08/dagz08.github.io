@@ -298,6 +298,10 @@ section {
 	background-size: cover;
 }
 
+.typing {
+	color: var(--green);
+}
+
 .home .content {
 	padding-top: 25rem;
 }
