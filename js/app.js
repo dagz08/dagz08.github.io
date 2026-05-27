@@ -56,13 +56,97 @@ function makeTex(cfg) {
 function dNetCore(c, cx, cy) { c.fillStyle = '#fff'; c.font = 'bold 48px sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('.NET', cx, cy - 14); c.font = '24px sans-serif'; c.fillStyle = '#cde'; c.fillText('Core', cx, cy + 28) }
 function dCSharp(c, cx, cy) { c.fillStyle = '#fff'; c.font = 'bold 76px sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('C#', cx, cy) }
 function dReact(c, cx, cy) { const t = '#61dafb'; c.strokeStyle = t; c.lineWidth = 5; for (let i = 0; i < 3; i++) { c.save(); c.translate(cx, cy); c.rotate(Math.PI / 3 * i); c.beginPath(); c.ellipse(0, 0, 72, 25, 0, 0, Math.PI * 2); c.stroke(); c.restore() } c.beginPath(); c.arc(cx, cy, 10, 0, Math.PI * 2); c.fillStyle = t; c.fill() }
-function dDocker(c, cx, cy) { c.fillStyle = '#2496ed'; c.fillRect(cx - 44, cy - 4, 88, 16);[[cx - 40, cy - 22], [cx - 18, cy - 22], [cx + 4, cy - 22], [cx - 29, cy - 42], [cx - 7, cy - 42]].forEach(([x, y]) => { c.strokeStyle = '#fff'; c.lineWidth = 3; c.strokeRect(x, y, 18, 16) }) }
+function dDocker(c, cx, cy) {
+  const logoY = cy - 20; // position logo higher
+  c.fillStyle = '#2496ed';
+  c.fillRect(cx - 44, logoY - 4, 88, 16);
+  [[cx - 40, logoY - 22], [cx - 18, logoY - 22], [cx + 4, logoY - 22], [cx - 29, logoY - 42], [cx - 7, logoY - 42]].forEach(([x, y]) => {
+    c.strokeStyle = '#fff';
+    c.lineWidth = 3;
+    c.strokeRect(x, y, 18, 16)
+  });
+
+  // Add text below logo
+  c.fillStyle = '#fff';
+  c.font = 'bold 18px sans-serif';
+  c.textAlign = 'center';
+  c.textBaseline = 'middle';
+  c.fillText('Docker', cx, cy + 35);
+}
 function dSQL(c, cx, cy) { ['#c0392b', '#e74c3c', '#ec7063'].forEach((col, i) => { const y = cy - 46 + i * 30; c.fillStyle = col; c.beginPath(); c.ellipse(cx, y + 11, 40, 11, 0, 0, Math.PI * 2); c.fill(); c.fillRect(cx - 40, y, 80, 11); c.beginPath(); c.ellipse(cx, y, 40, 11, 0, 0, Math.PI * 2); c.fill() }); c.fillStyle = '#fff'; c.font = 'bold 20px sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('SQL', cx, cy + 48) }
 function dRestApi(c, cx, cy) { c.fillStyle = '#2ecc71'; c.font = 'bold 28px monospace'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('{REST', cx, cy - 13); c.fillText('API}', cx, cy + 20) }
-function dMicro(c, cx, cy) { [[-24, -24], [6, -24], [-24, 6], [6, 6]].forEach(([dx, dy]) => { c.fillStyle = '#aaa'; c.fillRect(cx + dx, cy + dy, 20, 20); c.fillStyle = '#ccc'; c.fillRect(cx + dx, cy + dy, 9, 9); c.strokeStyle = '#777'; c.lineWidth = 2; c.strokeRect(cx + dx, cy + dy, 20, 20) }) }
+function dMicro(c, cx, cy) {
+  // Draw interconnected microservices logo (positioned higher)
+  const nodeRadius = 6;
+  const nodeColor = '#1bbca8';
+  const lineColor = '#2dd4aa';
+  const logoY = cy - 25; // position logo higher
+
+  // Define 4 service nodes in a circle
+  const nodes = [
+    { x: cx, y: logoY - 15 },
+    { x: cx + 15, y: logoY },
+    { x: cx, y: logoY + 15 },
+    { x: cx - 15, y: logoY }
+  ];
+
+  // Draw connecting lines
+  c.strokeStyle = lineColor;
+  c.lineWidth = 1.5;
+  c.globalAlpha = 0.6;
+  for (let i = 0; i < nodes.length; i++) {
+    const start = nodes[i];
+    const end = nodes[(i + 1) % nodes.length];
+    c.beginPath();
+    c.moveTo(start.x, start.y);
+    c.lineTo(end.x, end.y);
+    c.stroke();
+  }
+  c.globalAlpha = 1;
+
+  // Draw central node
+  c.fillStyle = nodeColor;
+  c.beginPath();
+  c.arc(cx, logoY, nodeRadius, 0, Math.PI * 2);
+  c.fill();
+
+  // Draw outer nodes
+  c.fillStyle = nodeColor;
+  nodes.forEach(node => {
+    c.beginPath();
+    c.arc(node.x, node.y, nodeRadius - 1.5, 0, Math.PI * 2);
+    c.fill();
+  });
+
+  // Add text below logo
+  c.fillStyle = '#fff';
+  c.font = 'bold 18px sans-serif';
+  c.textAlign = 'center';
+  c.textBaseline = 'middle';
+  c.fillText('Microservices', cx, cy + 35);
+}
 function dEFCore(c, cx, cy) { c.fillStyle = '#fff'; c.font = 'bold 60px sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('EF', cx, cy - 12); c.font = '22px sans-serif'; c.fillStyle = '#aac'; c.fillText('Core', cx, cy + 26) }
 function dJwt(c, cx, cy) { c.fillStyle = '#fb015b'; c.font = 'bold 32px sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('JWT', cx, cy - 10); c.font = '18px sans-serif'; c.fillStyle = '#fff'; c.fillText('✦ ✦ ✦', cx, cy + 22) }
-function dAzure(c, cx, cy) { c.fillStyle = '#0089d6'; c.beginPath(); c.moveTo(cx, cy - 68); c.lineTo(cx - 58, cy + 48); c.lineTo(cx - 14, cy + 48); c.lineTo(cx + 8, cy - 8); c.lineTo(cx + 58, cy + 48); c.lineTo(cx + 16, cy + 48); c.closePath(); c.fill() }
+function dAzure(c, cx, cy) {
+  const logoY = cy - 20; // position logo higher
+  c.fillStyle = '#0089d6';
+  c.beginPath();
+  c.moveTo(cx, logoY - 68);
+  c.lineTo(cx - 58, logoY + 48);
+  c.lineTo(cx - 14, logoY + 48);
+  c.lineTo(cx + 8, logoY - 8);
+  c.lineTo(cx + 58, logoY + 48);
+  c.lineTo(cx + 16, logoY + 48);
+  c.closePath();
+  c.fill();
+
+  // Add text below logo (positioned lower to avoid overlap)
+  c.fillStyle = '#fff';
+  c.font = 'bold 18px sans-serif';
+  c.textAlign = 'center';
+  c.textBaseline = 'middle';
+  c.fillText('Azure', cx, cy + 70);
+}
 function dAngular(c, cx, cy) {
   // Angular logo: simple red "A" with stylized shield
   c.fillStyle = '#dd0031';
@@ -402,10 +486,10 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     .then(() => {
       responseMessage.textContent = "✅ Your message has been sent successfully!";
       responseMessage.style.color = "green";
-      
+
       // Reset form and clear all floating/error states
       form.reset();
-      
+
       // Remove floating and error classes from all floating-field wrappers
       const wrappers = form.querySelectorAll('.floating-field');
       wrappers.forEach(wrapper => {

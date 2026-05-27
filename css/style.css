@@ -955,13 +955,14 @@ section {
 
 /* Move label to top-left when field is focused or has content or has error */
 .floating-field {
-	--field-bg: #fff; /* default field background */
+	--field-bg: #fff;
+	/* default field background */
 }
 
-.floating-field input:focus + .floating-label,
-.floating-field input:not(:placeholder-shown) + .floating-label,
-.floating-field textarea:focus + .floating-label,
-.floating-field textarea:not(:placeholder-shown) + .floating-label,
+.floating-field input:focus+.floating-label,
+.floating-field input:not(:placeholder-shown)+.floating-label,
+.floating-field textarea:focus+.floating-label,
+.floating-field textarea:not(:placeholder-shown)+.floating-label,
 .floating-field.floated .floating-label {
 	top: -10px;
 	left: 12px;
@@ -982,7 +983,8 @@ section {
 /* focus and filled state background (light blue) */
 .floating-field:focus-within,
 .floating-field.floated {
-	--field-bg: #eaf7ff; /* light blue for active/filled fields */
+	--field-bg: #eaf7ff;
+	/* light blue for active/filled fields */
 }
 
 /* When field has validation error, show red label but keep label background synced */
