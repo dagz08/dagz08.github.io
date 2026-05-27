@@ -299,21 +299,34 @@ document.addEventListener("DOMContentLoaded", function () {
   // Email regex pattern
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
 
-  // Create error message element for each field
+  // Create error message element for each field and manage floated/error classes
   inputs.forEach(input => {
+    const wrapper = input.closest('.floating-field') || input.parentNode;
     const error = document.createElement("small");
     error.className = "error-message";
     error.style.color = "red";
     error.style.display = "none";
-    input.parentNode.appendChild(error);
+    wrapper.appendChild(error);
+
+    // initialize floated state if pre-filled
+    if (input.value && input.value.trim() !== '') {
+      wrapper.classList.add('floated');
+    }
 
     // Validate on blur (when leaving the field)
     input.addEventListener("blur", function () {
       validateField(input, error);
     });
 
-    // Optional: live validation while typing
+    // Live behavior while typing: toggle floated state and revalidate if showing error
     input.addEventListener("input", function () {
+      if (input.value && input.value.trim() !== '') {
+        wrapper.classList.add('floated');
+      } else {
+        // only remove floated if there's no validation error
+        if (!wrapper.classList.contains('error')) wrapper.classList.remove('floated');
+      }
+
       if (error.style.display === "block") {
         validateField(input, error);
       }
@@ -324,7 +337,8 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     let valid = true;
     inputs.forEach(input => {
-      const error = input.parentNode.querySelector(".error-message");
+      const wrapper = input.closest('.floating-field') || input.parentNode;
+      const error = wrapper.querySelector(".error-message");
       if (!validateField(input, error)) {
         valid = false;
       }
@@ -337,11 +351,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Validation function
   function validateField(input, error) {
+    const wrapper = input.closest('.floating-field') || input.parentNode;
     const value = input.value.trim();
 
+    // Determine label text robustly (supports floating-label structure)
+    const floatingLabel = wrapper ? wrapper.querySelector('.floating-label') : null;
+    const externalLabel = document.querySelector(`label[for="${input.id}"]`);
+    const labelText = (floatingLabel && floatingLabel.textContent) || (externalLabel && externalLabel.textContent) || input.name || 'This field';
+
     if (!value) {
-      error.textContent = `${input.previousElementSibling.textContent} is required.`;
+      error.textContent = `${labelText} is required.`;
       error.style.display = "block";
+      wrapper.classList.add('error', 'floated'); // keep label floated when showing error
       input.style.borderColor = "red";
       return false;
     }
@@ -349,13 +370,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (input.type === "email" && !emailPattern.test(value)) {
       error.textContent = "Please enter a valid email address.";
       error.style.display = "block";
+      wrapper.classList.add('error', 'floated');
       input.style.borderColor = "red";
       return false;
     }
 
+    // valid
     error.textContent = "";
     error.style.display = "none";
+    wrapper.classList.remove('error');
     input.style.borderColor = "#ccc";
+
+    if (value !== '') wrapper.classList.add('floated'); else wrapper.classList.remove('floated');
     return true;
   }
 });

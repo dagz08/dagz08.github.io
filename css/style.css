@@ -906,37 +906,105 @@ section {
 
 /* Form Styling */
 .form-group {
-	display: flex;
-	flex-direction: column;
 	margin-bottom: 15px;
 	font-size: 1.5rem;
 }
 
-label {
-	margin-bottom: 6px;
-	font-weight: 500;
+/* Floating label wrapper */
+.floating-field {
+	position: relative;
 }
 
-input,
-textarea {
-	padding: 10px 12px;
+.floating-field input,
+.floating-field textarea {
+	width: 100%;
+	padding: 12px 12px;
 	border-radius: 8px;
 	border: 1px solid #ccc;
-	font-size: 3rem;
-	transition: border-color 0.2s ease;
-	resize: none;
-	/* 🔹 Prevent manual resizing */
+	font-size: 1.6rem;
+	transition: border-color 0.18s ease, box-shadow 0.18s ease;
+	background: transparent;
+	resize: vertical;
 	overflow-y: auto;
-	/* 🔹 Enable vertical scrolling */
 	max-height: 200px;
-	/* 🔹 Optional: limit height before scrolling starts */
 }
 
-input:focus,
-textarea:focus {
+.floating-field textarea {
+	min-height: 120px;
+}
+
+.floating-field .floating-label {
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #777;
+	font-size: 1.4rem;
+	pointer-events: none;
+	transition: all 0.18s ease;
+	background: transparent;
+	padding: 0 6px;
+}
+
+.floating-field input:focus,
+.floating-field textarea:focus {
 	border-color: #00c896;
 	outline: none;
+	box-shadow: 0 0 0 3px rgba(0, 200, 150, 0.06);
 }
+
+/* Move label to top-left when field is focused or has content or has error */
+.floating-field {
+	--field-bg: #fff; /* default field background */
+}
+
+.floating-field input:focus + .floating-label,
+.floating-field input:not(:placeholder-shown) + .floating-label,
+.floating-field textarea:focus + .floating-label,
+.floating-field textarea:not(:placeholder-shown) + .floating-label,
+.floating-field.floated .floating-label {
+	top: -10px;
+	left: 12px;
+	right: auto;
+	transform: none;
+	font-size: 1.1rem;
+	color: #00a67a;
+	background: var(--field-bg);
+	padding: 0 6px;
+}
+
+/* sync label background with input when focused or filled */
+.floating-field input,
+.floating-field textarea {
+	background: var(--field-bg);
+}
+
+/* focus and filled state background (light blue) */
+.floating-field:focus-within,
+.floating-field.floated {
+	--field-bg: #eaf7ff; /* light blue for active/filled fields */
+}
+
+/* When field has validation error, show red label but keep label background synced */
+.floating-field.error .floating-label {
+	color: red;
+	background: var(--field-bg);
+	padding: 0 6px;
+}
+
+/* Ensure autofill doesn't break backgrounds (webkit) */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px var(--field-bg) inset !important;
+	box-shadow: 0 0 0px 1000px var(--field-bg) inset !important;
+	-webkit-text-fill-color: inherit !important;
+}
+
+/* Minor rounding so label visually matches input corners */
+.floating-field .floating-label {
+	border-radius: 6px;
+}
+
 
 /* Send Button */
 .send-btn {
