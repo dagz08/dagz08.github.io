@@ -390,7 +390,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
   const responseMessage = document.getElementById("response-message");
-  const modal = document.getElementById("contactModal"); // reference your modal
+  const modal = document.getElementById("contactModal");
+  const form = document.getElementById("contact-form");
 
   emailjs.send("service_8u7gzns", "template_ohznp8p", {
     name: document.getElementById("name").value,
@@ -401,9 +402,21 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     .then(() => {
       responseMessage.textContent = "✅ Your message has been sent successfully!";
       responseMessage.style.color = "green";
-      document.getElementById("contact-form").reset();
+      
+      // Reset form and clear all floating/error states
+      form.reset();
+      
+      // Remove floating and error classes from all floating-field wrappers
+      const wrappers = form.querySelectorAll('.floating-field');
+      wrappers.forEach(wrapper => {
+        wrapper.classList.remove('floated', 'error');
+        const input = wrapper.querySelector('input, textarea');
+        if (input) {
+          input.style.borderColor = "#ccc";
+        }
+      });
 
-      // Wait 3 seconds, then clear message and close modal
+      // Wait 2 seconds, then clear message and close modal
       setTimeout(() => {
         responseMessage.textContent = "";
         modal.style.display = "none";
