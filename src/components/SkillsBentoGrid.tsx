@@ -96,7 +96,7 @@ export const SkillsBentoGrid: React.FC = () => {
             Technical Expertise & Stack
           </h2>
           <p className="mt-3 text-slate-400 text-base max-w-2xl font-light">
-            Every capability, framework, and engineering practice from my 9+ years of enterprise delivery. Explore in Grid, Master-Detail, or Interactive 3D mode.
+            Every capability, framework, and engineering practice from more than 10 years of enterprise and freelance delivery. Explore in Grid, Master-Detail, or Interactive 3D mode.
           </p>
         </div>
 

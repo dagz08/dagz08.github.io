@@ -112,7 +112,7 @@ export const AboutSection: React.FC = () => {
             </h3>
             
             <p className="text-slate-300 text-base leading-relaxed mb-4 font-light">
-              My engineering journey began with an insatiable fascination for logic puzzles, system mechanics, and algorithmic challenges. Over the past <span className="text-teal-300 font-semibold">9+ years</span>, that fascination evolved into a deep passion for building resilient, enterprise-grade software.
+              My engineering journey began with an insatiable fascination for logic puzzles, system mechanics, and algorithmic challenges. Across <span className="text-teal-300 font-semibold">more than 10 years</span> of engineering and freelancing experience, that fascination evolved into a deep passion for building resilient, enterprise-grade software.
             </p>
 
             <p className="text-slate-300 text-base leading-relaxed mb-8 font-light">

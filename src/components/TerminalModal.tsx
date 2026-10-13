@@ -105,7 +105,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
       case 'stats':
         output = (
           <div className="grid grid-cols-2 gap-2 text-slate-300">
-            <div><span className="text-teal-300 font-mono">Experience:</span> 9+ Years</div>
+            <div><span className="text-teal-300 font-mono">Experience:</span> 10+ Years</div>
             <div><span className="text-teal-300 font-mono">Projects:</span> 30+ Enterprise Solutions</div>
             <div><span className="text-teal-300 font-mono">Coffee:</span> 1,432+ Cups</div>
             <div><span className="text-teal-300 font-mono">Gaming:</span> Dota 2 & CS:GO</div>

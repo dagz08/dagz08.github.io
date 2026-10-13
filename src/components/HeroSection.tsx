@@ -74,7 +74,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact, onOpenT
             </div>
 
             <p className="text-slate-300 text-base leading-relaxed max-w-xl mb-8 font-light">
-              Technical Lead & Senior Software Engineer with <strong className="text-white font-semibold">9+ years</strong> designing and shipping mission-critical backends, high-throughput ASP.NET Core microservices, Azure distributed systems, and responsive modern web experiences with React.
+              Technical Lead & Senior Software Engineer with <strong className="text-white font-semibold">more than 10 years</strong> of experience designing and shipping mission-critical backends, high-throughput ASP.NET Core microservices, Azure distributed systems, and responsive modern web experiences with React.
             </p>
 
             {/* CTAs */}
@@ -117,7 +117,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact, onOpenT
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-3 gap-3 w-full max-w-lg pt-6 border-t border-white/10">
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-heading font-black text-white">9+</span>
+                <span className="text-2xl sm:text-3xl font-heading font-black text-white">10+</span>
                 <span className="text-xs text-slate-400 font-mono">Years Experience</span>
               </div>
               <div className="flex flex-col">
