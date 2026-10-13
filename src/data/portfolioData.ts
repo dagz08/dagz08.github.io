@@ -21,7 +21,7 @@ export const PORTFOLIO_DATA = {
     name: 'Karl Mendoza',
     nickname: 'Karl',
     role: 'Technical Lead .NET Developer',
-    subRoles: ['Technical Lead .NET Developer', 'Senior Software Engineer / Tech Lead', 'Enterprise .NET Specialist', 'Cloud Systems Architect', 'React & Full-Stack Explorer'],
+    subRoles: ['Technical Lead .NET Developer', 'Senior Software Engineer / Tech Lead', 'Enterprise .NET Specialist', 'Cloud Systems Architect', 'React Full-Stack Developer'],
     bio: `Allow me to introduce myself. I am Karl Mendoza, a Technical Lead and Senior Software Engineer with over 9 years of hands-on experience designing, architecting, and delivering high-performance enterprise systems. With a natural passion for complex puzzles, algorithmic problem-solving, and mentoring high-performing engineering teams, I specialize in crafting robust C# / ASP.NET Core backends, event-driven microservices, high-throughput SQL architectures, and scalable cloud solutions on Microsoft Azure. Whether leading architectural decisions, untangling complex legacy codebases, designing resilient distributed architectures, or building responsive modern interfaces with React, I bring technical rigor, clean code principles, and an unwavering commitment to quality.`,
     cvUrl: '/cv/KarlMendozaCV_2026.pdf',
     avatar: '/images/Karl.jpg',
